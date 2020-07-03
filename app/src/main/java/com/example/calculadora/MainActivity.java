@@ -8,6 +8,26 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    //solucion
+    private TextView solucion;
+    //numeros
+    private Button num_cero;
+    private Button num_uno;
+    private Button num_dos;
+    private Button num_tres;
+    private Button num_cuatro;
+    private Button num_cinco;
+    private Button num_seis;
+    private Button num_siete;
+    private Button num_ocho;
+    private Button num_nueve;
+    //operaciones
+    private Button btn_suma;
+    private Button btn_resta;
+    private Button btn_multiplicacion;
+    private Button btn_division;
+    private Button btn_igual;
+    private Button btn_clear;
 
     private  string number ="";
     public double num1 = 0;
@@ -15,25 +35,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected String symbol;
 
 
-    private TextView solucion;
-    private Button keyPad5, keyPad8, keyPad3, keyPaddos,
-    private Button keyPadSum, keyPadSubstract, keyPadMultiply, keyPadEqual, equal;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //solucion (la puede encontrar.en la vista.solucion
         solucion =  findViewById(R.id.solucion);
+        num_cero =   findViewById(R.id.num_cero);
+        num_uno  =   findViewById(R.id.num_uno);
+        num_dos  =   findViewById(R.id.num_dos);
+        num_tres =   findViewById(R.id.num_tres);
+        num_cuatro =   findViewById(R.id.num_cuatro);
+        num_cinco =   findViewById(R.id.num_cinco);
+        num_seis =   findViewById(R.id.num_seis);
+        num_siete =   findViewById(R.id.num_siete);
+        num_ocho =   findViewById(R.id.num_ocho);
+        num_nueve =   findViewById(R.id.num_nueve);
 
-        keyPad5 = findViewById(R.id.num_cuatro);
-        keyPad2 = findViewById(R.id.num_dos);
+        btn_multiplicacion = findViewById(R.id.btn_multiplicar);
+        btn_division = findViewById(R.id.btn_division);
+        btn_resta = findViewById(R.id.num_resta);
+        btn_borrar = findViewById(R.id.btn_borrar);
 
 
-        keyPadSum = findViewById(R.id.sum);
-        keyPadSubstract = findViewById(R.id.division);
+
+
+        key_padSum = findViewById(R.id.sum);
+        key_padSubstract = findViewById(R.id.division);
 
         //listener for button
 
@@ -90,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 solucion.setText(number);
                 break;
 
-            case R.id.num_ocho:
+            case R.id.num_siete:
                 number = number + "8";
                 solucion.setText(number);
                 break;
