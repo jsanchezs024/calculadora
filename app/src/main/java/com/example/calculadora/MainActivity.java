@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static com.example.calculadora.R.id.btn_borrar;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //solucion
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //operaciones
         btn_multiplicacion = findViewById(R.id.btn_multiplicar);
         btn_division = findViewById(R.id.btn_division);
-        btn_resta = findViewById(R.id.num_resta);
+        btn_resta = findViewById(R.id.btn_resta);
         btn_borrar = findViewById(R.id.btn_borrar);
 
         //this es el contexto (segun contexto)
@@ -85,86 +87,90 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         //cuando en la vista/view(v) vaya por el(get) id0
         switch (v.getId()){
+            //NUMEROS PARA AGREGAR
             case R.id.num_cero:
                 numero = numero + "0";
-                solucion.setText(number);
+                solucion.setText(numero);
                 break;
 
             case R.id.num_uno:
-                number = number + "1";
-                solucion.setText(number);
+                numero = numero + "1";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_dos:
-                number = number + "";
-                solucion.setText(number);
+                numero = numero + "";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_tres:
-                number = number + "3";
-                solucion.setText(number);
+                numero = numero + "3";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_cuatro:
-                number = number + "4";
-                solucion.setText(number);
+                numero = numero + "4";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_cinco:
-                number = number + "5";
-                solucion.setText(number);
+                numero = numero + "5";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_seis:
-                number = number + "6";
-                solucion.setText(number);
+                numero = numero + "6";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_siete:
-                number = number + "7";
-                solucion.setText(number);
+                numero = numero + "7";
+                solucion.setText(numero);
                 break;
 
-            case R.id.num_siete:
-                number = number + "8";
-                solucion.setText(number);
+            case R.id.num_ocho:
+                numero = numero + "8";
+                solucion.setText(numero);
                 break;
 
             case R.id.num_nueve:
-                number = number + "9";
-                solucion.setText(number);
+                numero = numero + "9";
+                solucion.setText(numero);
                 break;
 
-            case R.id.sum:
-                symbol = "+";
-                num1 = Integer.parseInt(number);
-                number = "";
-                break;
-
-            case R.id.substract:
+                //OPERACIONES PARA AGREGAR
+            case R.id.btn_resta:
                 symbol = "-";
-                num1 = Integer.parseInt(number);
-                number = "";
+                num1 = Integer.parseInt(numero);
+                numero = "";
                 break;
 
-            case R.id.division:
+
+
+            case R.id.btn_division:
                 symbol = "/";
-                num1 = Integer.parseInt(number);
-                number = "";
+                num1 = Integer.parseInt(numero);
+                numero = "";
                 break;
 
-            case R.id.multiply:
+            case R.id.btn_multiplicar:
                 symbol = "X";
-                num1 = Integer.parseInt(number);
-                number = "";
+                num1 = Integer.parseInt(numero);
+                numero = "";
                 break;
+            case R.id.btn_suma:
+                symbol = "+";
+                num1 = Integer.parseInt(numero);
+                numero = "";
+                break;
+            case R.id.btn_resultado:
+                num2 = Integer.parseInt(numero);
 
-            case R.id.equal:
-                num2 = Integer.parseInt(number);
 
-                switch (symbol){
+
+            switch (symbol){
                     case "+":
-                        solucion.setText( (num1 + num2));
+                        solucion.setText("solucion: " + (num1 + num2));
                         break;
                     case "-":
                         solucion.setText("solucion: " + (num1 - num2));
@@ -179,15 +185,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 num1 = 0;
                 num2 = 0;
-                number = "";
+                numero = "";
 
                 break;
 
-            case R.id.CE:
+            case R.id.btn_borrar:
                 symbol = "";
                 num1 = 0;
                 num2 = 0;
-                number = "";
+                numero = "";
                 solucion.setText("");
                 break;
 
