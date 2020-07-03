@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_multiplicacion;
     private Button btn_division;
     private Button btn_igual;
-    private Button btn_clear;
-
-    private  string number ="";
+    private Button btn_borrar;
+    //variables para guardar lo que ingrsa el usuario
+    private  String numero ="";
     public double num1 = 0;
-    private doubble num2 = 0;
-    protected String symbol;
+    private double num2 = 0;
+    protected String symbol = "";
 
 
     @Override
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //solucion (la puede encontrar.en la vista.solucion
+        //numeros
         solucion =  findViewById(R.id.solucion);
         num_cero =   findViewById(R.id.num_cero);
         num_uno  =   findViewById(R.id.num_uno);
@@ -53,34 +54,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         num_ocho =   findViewById(R.id.num_ocho);
         num_nueve =   findViewById(R.id.num_nueve);
 
+        //operaciones
         btn_multiplicacion = findViewById(R.id.btn_multiplicar);
         btn_division = findViewById(R.id.btn_division);
         btn_resta = findViewById(R.id.num_resta);
         btn_borrar = findViewById(R.id.btn_borrar);
 
+        //this es el contexto (segun contexto)
+        num_cero.setOnClickListener(this);
+        num_uno.setOnClickListener(this);
+        num_dos.setOnClickListener(this);
+        num_tres.setOnClickListener(this);
+        num_cuatro.setOnClickListener(this);
+        num_cinco.setOnClickListener(this);
+        num_seis.setOnClickListener(this);
+        num_siete.setOnClickListener(this);
+        num_ocho.setOnClickListener(this);
+        num_nueve.setOnClickListener(this);
 
-
-
-        key_padSum = findViewById(R.id.sum);
-        key_padSubstract = findViewById(R.id.division);
-
-        //listener for button
-
-        keyPad5.setOnClickListener(this);
-        keyPad2.setOnClickListener(this);
-
-
-        keyPadSum.setOnClickListener(this);
-        keyPadSubstract.setOnClickListener(this);
+        //lo mismo pero con los botones de operaciones
+        btn_suma.setOnClickListener(this);
+        btn_resta.setOnClickListener(this);
+        btn_division.setOnClickListener(this);
+        btn_multiplicacion.setOnClickListener(this);
+        btn_borrar.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-
+        //cuando en la vista/view(v) vaya por el(get) id0
         switch (v.getId()){
             case R.id.num_cero:
-                number = number + "0";
+                numero = numero + "0";
                 solucion.setText(number);
                 break;
 
