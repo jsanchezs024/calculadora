@@ -33,7 +33,7 @@
             android:id="@+id/num_siete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_margin="20dp"
             android:layout_weight="1"
             android:text="7"
             android:textSize="24sp" />
@@ -71,11 +71,6 @@
         android:layout_margin="20dp"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-        android:orientation="horizontal"
-        android:layout_margin="20dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
         <Button
             android:id="@+id/num_cuatro"
             android:layout_width="match_parent"
@@ -119,11 +114,6 @@
         android:layout_margin="20dp"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-        android:orientation="horizontal"
-        android:layout_margin="20dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
         <Button
             android:id="@+id/num_uno"
             android:layout_width="match_parent"
@@ -166,11 +156,6 @@
         android:layout_margin="20dp"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-        android:orientation="horizontal"
-        android:layout_margin="20dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
         <Button
             android:id="@+id/btn_borrar"
             android:layout_width="match_parent"
