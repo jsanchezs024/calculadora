@@ -144,13 +144,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 numero = "";
                 break;
 
-            case R.id.btn_borrar:
-                symbol = "";
-                num1 = 0;
-                num2 = 0;
-                numero = "";
-                solucion.setText("0");
-                break;
 
             case R.id.btn_resultado:
                 num2 = Integer.parseInt(numero);
@@ -175,6 +168,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 num1 = 0;
                 num2 = 0;
                 numero = "";
+
+                break;
+
+            case R.id.btn_borrar:
+                symbol = "";
+                num1 = 0;
+                num2 = 0;
+                numero = "";
+                solucion.setText("0");
+                break;
 
 
 
