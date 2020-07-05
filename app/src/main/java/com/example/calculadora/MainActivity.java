@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_resta;
     private Button btn_multiplicacion;
     private Button btn_division;
-    private Button btn_igual;
+    private Button btn_resultado;
     private Button btn_borrar;
     //variables para guardar lo que ingrsa el usuario
 
