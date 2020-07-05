@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private  String numero ="";
     private double num1 = 0;
     private double num2 = 0;
-    protected String symbol = "";
+    private String symbol = "";
 
 
     @Override
