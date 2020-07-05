@@ -145,8 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
 
-
-            case R.id.btn_division:
+                case R.id.btn_division:
                 symbol = "/";
                 num1 = Integer.parseInt(numero);
                 numero = "";
@@ -165,7 +164,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_resultado:
                 num2 = Integer.parseInt(numero);
 
-
+            case R.id.btn_borrar:
+                symbol = "";
+                num1 = 0;
+                num2 = 0;
+                numero = "";
+                solucion.setText("0");
+                break;
 
             switch (symbol){
                     case "+":
@@ -188,13 +193,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
 
-            case R.id.btn_borrar:
-                symbol = "";
-                num1 = 0;
-                num2 = 0;
-                numero = "";
-                solucion.setText("");
-                break;
+
 
 
         }
