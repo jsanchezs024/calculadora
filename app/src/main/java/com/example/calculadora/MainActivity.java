@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_borrar;
     //variables para guardar lo que ingrsa el usuario
     private  String numero ="";
-    public double num1 = 0;
+    private double num1 = 0;
     private double num2 = 0;
     protected String symbol = "";
 
@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         num_nueve.setOnClickListener(this);
 
         //lo mismo pero con los botones de operaciones
-        btn_suma.setOnClickListener(this);
         btn_resta.setOnClickListener(this);
         btn_division.setOnClickListener(this);
         btn_multiplicacion.setOnClickListener(this);
