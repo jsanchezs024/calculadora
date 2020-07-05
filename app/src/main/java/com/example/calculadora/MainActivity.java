@@ -7,9 +7,17 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import static com.example.calculadora.R.id.btn_borrar;
+import static com.example.calculadora.R.id.btn_resultado;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private  String numero ="";
+    private double num1 = 0;
+    private double num2 = 0;
+    private String symbol;
+
+
+
     //solucion
     private TextView solucion;
     //numeros
@@ -31,20 +39,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_igual;
     private Button btn_borrar;
     //variables para guardar lo que ingrsa el usuario
-    private  String numero ="";
-    private double num1 = 0;
-    private double num2 = 0;
-    private String symbol = "";
-
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle savedIntanceState){
+        super.onCreate(savedIntanceState);
         setContentView(R.layout.activity_main);
 
         //solucion (la puede encontrar.en la vista.solucion
-        //numeros
         solucion =  findViewById(R.id.solucion);
+        //numeros
         num_cero =   findViewById(R.id.num_cero);
         num_uno  =   findViewById(R.id.num_uno);
         num_dos  =   findViewById(R.id.num_dos);
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_division = findViewById(R.id.btn_division);
         btn_resta = findViewById(R.id.btn_resta);
         btn_borrar = findViewById(R.id.btn_borrar);
+        btn_suma = findViewById(R.id.btn_suma);
+        btn_resultado = findViewById(R.id.btn_resultado);
 
         //this es el contexto (segun contexto)
         num_cero.setOnClickListener(this);
@@ -79,6 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_division.setOnClickListener(this);
         btn_multiplicacion.setOnClickListener(this);
         btn_borrar.setOnClickListener(this);
+        btn_suma.setOnClickListener(this);
+        btn_resultado.setOnClickListener(this);
+
 
     }
 
