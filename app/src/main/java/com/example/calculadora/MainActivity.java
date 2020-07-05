@@ -145,11 +145,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
 
+                case R.id.btn_division:
+                symbol = "/";
+                num1 = Integer.parseInt(numero);
+                numero = "";
+                break;
+
+            case R.id.btn_multiplicar:
+                symbol = "X";
+                num1 = Integer.parseInt(numero);
+                numero = "";
+                break;
+            case R.id.btn_suma:
+                symbol = "+";
+                num1 = Integer.parseInt(numero);
+                numero = "";
+                break;
             case R.id.btn_resultado:
                 num2 = Integer.parseInt(numero);
 
 
-                switch (symbol){
+
+            switch (symbol){
                     case "+":
                         solucion.setText("solucion: " + (num1 + num2));
                         break;
@@ -168,7 +185,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 num1 = 0;
                 num2 = 0;
                 numero = "";
-
                 break;
 
             case R.id.btn_borrar:
